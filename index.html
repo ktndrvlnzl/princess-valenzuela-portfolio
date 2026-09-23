@@ -6,10 +6,10 @@
   <title>Princess Reyes Valenzuela | Executive Assistant &amp; Bookkeeper</title>
   <meta name="description" content="Princess Reyes Valenzuela — Executive Assistant, Bookkeeper, and Customer Service Professional with 15+ years of BPO experience and 4 years remote. Available for remote roles and client work." />
 
-  <!-- Google Fonts: Libre Caslon Text (headings), Work Sans (body), IBM Plex Mono (data/dates/tags) -->
+  <!-- Google Fonts: Fraunces (headings, brand mark), Work Sans (body), IBM Plex Mono (data/dates/tags) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Work+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;0,700;1,600;1,700&family=Work+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -22,8 +22,13 @@
   <header class="site-header">
     <div class="nav-wrap">
       <a href="#home" class="logo">
-        <span class="logo-mark" aria-hidden="true">PRV</span>
-        <span class="logo-text">Princess R. Valenzuela</span>
+        <!-- Growth Vine brand mark: italic P with a small hand-drawn vine -->
+        <svg class="logo-mark" width="34" height="34" viewBox="0 0 60 60" aria-hidden="true">
+          <path d="M22,44 C16,30 22,16 34,11" fill="none" stroke="var(--terracotta)" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M27,20 C34,17 41,20 43,27 C35,28 29,25 27,20 Z" fill="var(--dusty-rose)"/>
+          <text x="14" y="46" font-family="Fraunces, Georgia, serif" font-style="italic" font-weight="700" font-size="34" fill="var(--burgundy)">P</text>
+        </svg>
+        <span class="logo-text">Princess Reyes Valenzuela</span>
       </a>
 
       <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav">
@@ -55,34 +60,81 @@
         <div class="hero-content">
           <p class="eyebrow">Executive Assistant &middot; Bookkeeper &middot; Customer Service Professional</p>
           <h1>Princess Reyes Valenzuela</h1>
+
+          <ul class="role-stack" aria-hidden="true">
+            <li>Executive Assistant</li>
+            <li>Bookkeeper</li>
+            <li>Customer Service Professional</li>
+          </ul>
+
           <p class="hero-lede">
             Detail-oriented remote professional with 15+ years of BPO experience and 4 years supporting
             executives and small businesses remotely. I keep books balanced, inboxes and tickets under
-            control, and clients taken care of &mdash; accurately and on time.
+            control, and customers taken care of &mdash; accurately and on time.
           </p>
 
           <div class="hero-actions">
-            <a href="#experience" class="btn btn-primary">View Experience</a>
-            <a href="#contact" class="btn btn-outline">Contact Me</a>
+            <a href="#experience" class="btn btn-primary">View My Experience</a>
+            <a href="#contact" class="btn btn-accent">Let's Work Together</a>
+            <a href="assets/documents/Princess_Valenzuela_Resume.pdf" class="btn btn-text" download>Download Resume</a>
           </div>
 
           <p class="availability-badge">
             <span class="badge-dot" aria-hidden="true"></span>
-            Open to new remote opportunities &amp; client engagements
+            Open to new remote opportunities &amp; professional inquiries
           </p>
         </div>
 
-        <div class="hero-visual" aria-hidden="true">
-          <div class="ledger-stamp">
-            <div class="stamp-ring">
-              <span class="stamp-initials">PRV</span>
-              <span class="stamp-sub">BALANCED &amp; RELIABLE</span>
-            </div>
+        <div class="hero-visual">
+          <div class="hero-blobs" aria-hidden="true">
+            <span class="blob blob-1"></span>
+            <span class="blob blob-2"></span>
+            <span class="blob blob-3"></span>
           </div>
+
+          <!--
+            PHOTO GOES HERE.
+            Right now this shows a placeholder silhouette so the layout and
+            eye-tracking effect can be seen before the real photo is added.
+            See "Adding the real photo" in README.md for exact steps —
+            you'll replace the <svg class="hero-photo-placeholder"> block
+            below with an <img class="hero-photo" src="..." /> tag, and
+            re-check the two --eye-x/--eye-y values so the pupils sit on
+            her actual eyes.
+          -->
+          <div class="hero-photo-frame" id="heroPhotoFrame">
+            <svg class="hero-photo-placeholder" viewBox="0 0 300 360" aria-hidden="true">
+              <ellipse cx="150" cy="150" rx="78" ry="86" fill="var(--dusty-rose)"/>
+              <path d="M72,300 C72,230 108,210 150,210 C192,210 228,230 228,300 L228,360 L72,360 Z" fill="var(--plum-brown)" opacity="0.15"/>
+            </svg>
+
+            <span class="eye-pupil eye-left" id="eyeLeft" style="--eye-x:41%; --eye-y:40%;"></span>
+            <span class="eye-pupil eye-right" id="eyeRight" style="--eye-x:59%; --eye-y:40%;"></span>
+          </div>
+
+          <svg class="hero-vine" viewBox="0 0 120 200" aria-hidden="true">
+            <path d="M20,180 C6,140 18,96 46,72" fill="none" stroke="var(--terracotta)" stroke-width="3" stroke-linecap="round"/>
+            <path d="M28,110 C42,102 56,108 60,122 C46,124 34,120 28,110 Z" fill="var(--peach)"/>
+            <path d="M14,150 C28,144 40,150 42,164 C28,166 18,160 14,150 Z" fill="var(--dusty-rose)"/>
+          </svg>
         </div>
       </div>
+    </section>
 
-      <div class="ledger-rule" aria-hidden="true"></div>
+    <!-- ============ STATS ============ -->
+    <section class="stats-band" aria-label="Experience at a glance">
+      <div class="container stats-grid">
+        <div class="stat">
+          <span class="stat-blob" aria-hidden="true"></span>
+          <span class="stat-number" data-count-to="15" data-suffix="+">0</span>
+          <span class="stat-label">Years of BPO Experience</span>
+        </div>
+        <div class="stat">
+          <span class="stat-blob" aria-hidden="true"></span>
+          <span class="stat-number" data-count-to="4">0</span>
+          <span class="stat-label">Years of Remote Work Experience</span>
+        </div>
+      </div>
     </section>
 
     <!-- ============ ABOUT ============ -->
@@ -107,12 +159,6 @@
             keeping a general ledger accurate, resolving an IT ticket, or following up on an outstanding
             invoice, I bring the same steady, detail-first approach to the work.
           </p>
-
-          <ul class="about-highlights">
-            <li><span class="hl-num">15+</span> years of BPO experience</li>
-            <li><span class="hl-num">4</span> years remote work experience</li>
-            <li><span class="hl-num">2+</span> current bookkeeping client accounts</li>
-          </ul>
         </div>
       </div>
     </section>
@@ -122,50 +168,52 @@
       <div class="container">
         <div class="section-heading">
           <p class="eyebrow">Services</p>
-          <h2>How I can support your business</h2>
+          <h2>What I can help with</h2>
         </div>
 
         <div class="card-grid">
 
           <article class="service-card">
-            <h3>Executive &amp; Administrative Support</h3>
-            <p>Calendar and inbox management, day-to-day administrative support, records organization, and coordination across multiple priorities.</p>
+            <h3>Executive Assistance</h3>
+            <p>Administrative support, calendar and inbox management, IT ticket coordination, and scheduling and follow-ups.</p>
             <ul class="tag-list">
+              <li>Administrative support</li>
               <li>Email management</li>
-              <li>Records &amp; documentation</li>
-              <li>Process documentation</li>
-              <li>Multi-priority coordination</li>
-            </ul>
-          </article>
-
-          <article class="service-card">
-            <h3>Bookkeeping &amp; Financial Support</h3>
-            <p>Full-cycle bookkeeping support including AP/AR, invoicing, payment processing, and bank reconciliation using QuickBooks Online and Sage50.</p>
-            <ul class="tag-list">
-              <li>AP / AR</li>
-              <li>Invoicing &amp; payments</li>
-              <li>Bank reconciliation</li>
-              <li>QuickBooks Online &amp; Sage50</li>
-            </ul>
-          </article>
-
-          <article class="service-card">
-            <h3>Customer &amp; Technical Support</h3>
-            <p>Phone, chat, and email support for customer inquiries, plus IT ticket coordination &mdash; tracking requests from intake through resolution.</p>
-            <ul class="tag-list">
-              <li>Phone / chat / email support</li>
               <li>IT ticket coordination</li>
-              <li>Status tracking &amp; follow-up</li>
+              <li>Scheduling &amp; follow-ups</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            <h3>Bookkeeping</h3>
+            <p>Full-cycle bookkeeping support including AP/AR, invoicing, payment processing, and bank reconciliation.</p>
+            <ul class="tag-list">
+              <li>Accounts payable</li>
+              <li>Accounts receivable</li>
+              <li>Invoicing &amp; payment processing</li>
+              <li>Bank reconciliation</li>
+              <li>Financial records</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            <h3>Customer Support</h3>
+            <p>Phone, chat, and email support for customer inquiries, plus technical support and issue resolution.</p>
+            <ul class="tag-list">
+              <li>Phone support</li>
+              <li>Chat &amp; email support</li>
+              <li>Technical support</li>
+              <li>Customer inquiries</li>
             </ul>
           </article>
 
           <article class="service-card">
             <h3>Virtual Assistance</h3>
-            <p>Appointment setting, outbound calling, lead generation, and general virtual assistance for busy teams and business owners.</p>
+            <p>Appointment setting, outbound calling, lead generation, and general virtual assistance for busy teams.</p>
             <ul class="tag-list">
               <li>Appointment setting</li>
-              <li>Lead generation</li>
               <li>Outbound calling</li>
+              <li>Lead generation</li>
               <li>Data entry</li>
             </ul>
           </article>
@@ -174,34 +222,30 @@
       </div>
     </section>
 
-    <!-- ============ WHY WORK WITH ME ============ -->
-    <section id="why" class="section">
+    <!-- ============ HOW I WORK ============ -->
+    <section id="how" class="section">
       <div class="container why-grid">
         <div class="section-heading">
-          <p class="eyebrow">Why Work With Me</p>
+          <p class="eyebrow">How I Work</p>
           <h2>What I bring to the table</h2>
         </div>
 
         <ul class="why-list">
           <li>
-            <h3>Highly organized &amp; detail-oriented</h3>
+            <h3>Organized</h3>
             <p>The kind of accuracy financial records and client communications require.</p>
           </li>
           <li>
-            <h3>Clear communicator</h3>
-            <p>Strong written and verbal communication with clients, vendors, and internal teams.</p>
+            <h3>Accurate</h3>
+            <p>Careful, detail-first work, whether it's a ledger, a ticket, or a client email.</p>
           </li>
           <li>
-            <h3>Independent &amp; adaptable</h3>
-            <p>Comfortable working across time zones and managing my own priorities without oversight.</p>
+            <h3>Adaptable</h3>
+            <p>Comfortable working across time zones and adjusting to different tools and workflows.</p>
           </li>
           <li>
-            <h3>Trusted with confidential information</h3>
-            <p>Experienced handling sensitive financial and client data with discretion.</p>
-          </li>
-          <li>
-            <h3>Deadline-driven</h3>
-            <p>Able to manage multiple accounts and priorities while meeting deadlines consistently.</p>
+            <h3>Independent</h3>
+            <p>Able to manage my own priorities and deadlines without close oversight.</p>
           </li>
         </ul>
       </div>
@@ -221,26 +265,26 @@
             <p class="timeline-date">Feb 2026 &ndash; Aug 2026</p>
             <div class="timeline-content">
               <h3>Executive Administrative Assistant / IT Administrative Support</h3>
-              <p class="timeline-meta">PSVA &mdash; Remote &middot; Client: Succurri Inc.</p>
+              <p class="timeline-meta">PSVA &mdash; Remote</p>
               <ul>
                 <li>Managed IT ticket schedules, incoming requests, ticket creation, status tracking, and follow-ups to support timely resolution.</li>
                 <li>Reviewed incoming IT support tickets, identified required actions, and coordinated requests with the appropriate team members.</li>
-                <li>Monitored pending tickets and maintained accurate records of client IT requests and resolutions.</li>
+                <li>Monitored pending tickets and maintained accurate records of IT requests and resolutions.</li>
                 <li>Assisted with computer updates, software updates, and program installations.</li>
-                <li>Monitored incoming emails and prioritized client requests and important communications.</li>
+                <li>Monitored incoming emails and prioritized requests and important communications.</li>
               </ul>
             </div>
           </li>
 
           <li class="timeline-item">
-            <p class="timeline-date">Current</p>
+            <p class="timeline-date">Ongoing</p>
             <div class="timeline-content">
               <h3>Executive Assistant / Bookkeeper</h3>
-              <p class="timeline-meta">Austin Bookkeeping Hub &mdash; Remote &middot; Clients: Amtec Medical Inc. &amp; Silicon Audio Inc.</p>
+              <p class="timeline-meta">Austin Bookkeeping Hub &mdash; Remote</p>
               <ul>
-                <li>Provide bookkeeping, AP, AR, invoicing, payment processing, and administrative support for multiple client accounts.</li>
+                <li>Provide bookkeeping, AP, AR, invoicing, payment processing, and administrative support for multiple accounts.</li>
                 <li>Process and monitor invoices, payment links, ACH payments, credit card transactions, and vendor payments.</li>
-                <li>Follow up on outstanding receivables, track payments, reconcile customer accounts, and communicate regarding past-due balances.</li>
+                <li>Follow up on outstanding receivables, track payments, and reconcile accounts.</li>
                 <li>Support QuickBooks Online and Sage50 reconciliation, bank feeds, transaction categorization, and financial record maintenance.</li>
                 <li>Prepare and review sales orders, purchase orders, invoices, payment reports, and order confirmations.</li>
                 <li>Assist with month-end bookkeeping, including Profit &amp; Loss reports and bank register reviews.</li>
@@ -402,10 +446,11 @@
       <div class="container contact-grid">
         <div class="section-heading">
           <p class="eyebrow">Contact</p>
-          <h2>Let's work together</h2>
+          <h2>Need reliable remote support?</h2>
           <p class="contact-lede">
-            Looking for reliable, detail-oriented support for your books, your inbox, or your customers?
-            Send a message below or reach out directly by email.
+            I can support your business with administrative, bookkeeping, customer service, and related
+            professional tasks &mdash; accurately, independently, and on time. Send a message below or
+            reach out directly by email.
           </p>
 
           <p class="contact-direct">
